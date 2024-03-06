@@ -1,0 +1,29 @@
+<!-- simple intreset -->
+<html>
+    <head>
+        <script>
+            function si()
+            {
+                var p=document.getElementById("p").value;
+                var r=document.getElementById("r").value;
+                var t=document.getElementById("t").value;
+            var si=(Number(p)*Number(r)*Number(t))/100;
+            window.alert("Simple intreset ="+si);
+            document.getElementById("h1").innerHTML=si;
+            }
+        </script>
+        <body>
+            enter principle value
+            <input type="text" id="p">
+            <br />
+            enter rate value
+            <input type="text" id="r">
+            <br />
+            enter time value
+            <input type="text" id="t">
+            <br />
+            <input type="button" value="CHECK" onclick="si()" ;>
+            <h1 id="h1"></h1>
+        </body>
+    </head>
+</html>

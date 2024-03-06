@@ -1,0 +1,41 @@
+<!-- largest of three -->
+<html>
+
+<head>
+    <script>
+        function check() {
+            var a = document.getElementById("a").value;
+            var b = document.getElementById("b").value;
+            var c = document.getElementById("c").value;
+            if (a > b && a > c) {
+                document.write("largest is=" + a);
+                window.alert("largest is=" + a);
+
+            }
+            else if (b > a && b > c) {
+
+                document.write("largest is=" + b);
+                window.alert("largest is=" + b);
+            }
+            else {
+
+                document.write("largest is=" + c);
+                window.alert("largest is=" + c);
+            }
+        }
+    </script>
+
+<body>
+    enter first value
+    <input type="text" id="a">
+    <br />
+    enter second value
+    <input type="text" id="b">
+    <br />
+    enter third value
+    <input type="text" id="c">
+    <br />
+    <input type="button" value="CHECK" onclick="check()" ;>
+    </head>
+
+</html>

@@ -1,0 +1,29 @@
+<html>
+
+<head>
+    <script>
+        function check() {
+            var a = document.getElementById("a").value;
+            var b = document.getElementById("b").value;
+            if (a > b) {
+
+                document.write("largest is=", a);
+            }
+            else {
+
+                document.write("largest is=", b);
+            }
+
+        }
+    </script>
+</head>
+
+<body>
+    Enter a value a
+    <input type="text" id="a"></br>
+    Enter a value b
+    <input type="text" id="b"></br>
+    <input type="button" value="CHECK" onclick="check()">
+</body>
+
+</html>

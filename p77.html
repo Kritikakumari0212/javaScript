@@ -1,0 +1,21 @@
+<!-- celsius to fahrenheit -->
+<html>
+    <head>
+        <script>
+function fahrenheit()
+{
+    var c=document.getElementById("c").value;
+var f=(c*9/5)+32;
+window.alert("c celsius in fahrenheit is ="+f);
+document.getElementById("h1").innerHTML=f;
+}
+        </script>
+    </head>
+    <body>
+        enter celsius value
+        <input type="text" id="c">
+        <br />
+        <input type="button" value="CHECK" onclick="fahrenheit()" ;>
+        <h1 id="h1"></h1>
+    </body>
+</html>

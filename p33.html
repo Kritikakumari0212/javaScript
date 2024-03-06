@@ -1,0 +1,28 @@
+<!-- even or odd -->
+<html>
+
+<head>
+    <script>
+            function check()
+        {
+            var num = document.getElementById("num").value;
+            if (num % 2 == 0) {
+                document.write("num is even");
+                window.alert("num is even");
+            }
+            else {
+                document.write("num is odd");
+                window.alert("num is odd");
+            }
+        }
+    </script>
+
+<body>
+    Enter your number
+    <input type="text" id="num">
+    <br />
+    <input type="button" value="CHECK" onclick="check()">
+</body>
+</head>
+
+</html>

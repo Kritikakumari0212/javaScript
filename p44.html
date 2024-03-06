@@ -1,0 +1,30 @@
+<!-- area  and perimeter of rectangle -->
+<html>
+
+<head>
+    <script>
+        function area() {
+            var l = document.getElementById("l").value;
+            var b = document.getElementById("b").value;
+
+            var area = l * b;
+
+            window.alert("Area of rectangle is=" + area);
+            
+            document.getElementById("h1").innerHTML=area;
+        }
+    </script>
+
+<body>
+    enter length of rectangle
+    <input type="text" id="l">
+    <br />
+    enter bredth of rectangle
+    <input type="text" id="b">
+    <br />
+    <input type="button" value="AREA" onclick="area()">
+    <h1 id="h1"></h1>
+</body>
+</head>
+
+</html>
