@@ -1,0 +1,179 @@
+<html>
+
+<head>
+    <script>
+        function ch() {
+            //alert("hi hi")
+            var name = document.getElementById("t").value;
+            var fname = document.getElementById("f").value;
+            var mname = document.getElementById("m").value;
+            var email = document.getElementById("e").value;
+            var add = document.getElementById("a").value;
+            var pass = document.getElementById("p").value;
+            var mob=document.getElementById("mb").value;
+            var pin=document.getElementById("pi").value;
+            var adhar = document.getElementById("a").value;
+
+            //alert(name);
+            if (name == "") {
+                //alert("galat");
+                document.getElementById("t").style.border = "2px solid red";
+                document.getElementById("sp").innerHTML = "Invalid name";
+            }
+            else {
+                //alert("sahi");
+                document.getElementById("sp").innerHTML = "";
+                document.getElementById("t").style.border = "";
+
+            }
+            if (fname == "") {
+                document.getElementById("f").style.border = "2px solid red";
+                document.getElementById("st").innerHTML = "Invalid name";
+            }
+            else {
+                document.getElementById("st").innerHTML = "";
+                document.getElementById("f").style.border = "";
+            }
+            if (mname == "") {
+                document.getElementById("m").style.border = "2px solid red";
+                document.getElementById("sm").innerHTML = "Invalid name";
+            }
+            else {
+                document.getElementById("sm").innerHTML = "";
+                document.getElementById("m").style.border = "";
+            }
+            if (add == "") {
+                document.getElementById("a").style.border = "2px solid red";
+                document.getElementById("sa").innerHTML = "Invalid address";
+            }
+            else {
+                document.getElementById("a").style.border = "";
+                document.getElementById("sa").innerHTML = "";
+            }
+            if (email == "") {
+                document.getElementById("e").style.border = "2px solid red";
+                document.getElementById("se").innerHTML = "Invalid email";
+            }
+            else {
+                document.getElementById("se").innerHTML = "";
+                document.getElementById("e").style.border = "";
+            }
+            if (pass == "") {
+                document.getElementById("p").style.border = "2px solid red";
+                document.getElementById("spp").innerHTML = "Invalid password";
+            }
+            else {
+                if (pass.length <= 3) {
+                    document.getElementById("p").style.border = "2px solid red";
+                    document.getElementById("spp").innerHTML = "weak password";
+                    document.getElementById("spp").style.color="red";
+                }
+                else if (pass.length > 3 && pass.length <= 6) {
+                    document.getElementById("p").style.border = "2px solid orange";
+                    document.getElementById("spp").innerHTML = "medium password";
+                    document.getElementById("spp").style.color="orange";
+                }
+                else {
+                    document.getElementById("p").style.border = "2px solid green";
+                    document.getElementById("spp").innerHTML = "strong password";
+                    document.getElementById("spp").style.color="green";
+                }
+            }
+            if(mob=="")
+            {
+                document.getElementById("mb").style.border = "2px solid red";
+                document.getElementById("sb").innerHTML = "Invalid number";
+            }
+            else
+            {
+                document.getElementById("mb").style.border = "";
+                document.getElementById("sb").innerHTML = "";
+            }
+            if (pin == "") {
+                document.getElementById("pi").style.border = "2px solid red";
+                document.getElementById("si").innerHTML = "Invalid pin";
+            }
+            else {
+                if (pin.length <= 3) {
+                    document.getElementById("pi").style.border = "2px solid red";
+                    document.getElementById("si").innerHTML = "wrong format";
+                    document.getElementById("si").style.color = "red";
+                }
+                else if (pin.length>3 && pin.length<6) {
+                    document.getElementById("pi").style.border = "2px solid red";
+                    document.getElementById("si").innerHTML = "wrong format";
+
+                }
+                else {
+                    document.getElementById("pi").style.border = "";
+                    document.getElementById("si").innerHTML = "";
+                }
+            }
+            if (adhar == "") {
+                // document.getElementById("a").style.border = "2px solid red";
+                // document.getElementById("sa").innerHTML = "Invalid adhar";
+            }
+            else {
+                if (adhar.length <=6) {
+                    document.getElementById("a").style.border = "2px solid red";
+                    document.getElementById("sa").innerHTML = "wrong format";
+                    document.getElementById("sa").style.color = "red";
+                }
+                else if (adhar.length>6 && adhar.length<12) {
+                    document.getElementById("a").style.border = "2px solid red";
+                    document.getElementById("sa").innerHTML = "wrong format";
+                    document.getElementById("sa").style.color = "red";
+                }
+                else {
+                    document.getElementById("a").style.border = "";
+                    document.getElementById("sa").innerHTML = "";
+                    document.getElementById("sa").style.color = "";
+                }
+            }
+        }
+    </script>
+</head>
+
+<body>
+    Name
+    <input type="text" id="t">
+    <span id="sp" style="color: red;"></span>
+    <br />
+    Father's Name
+    <input type="text" id="f">
+    <span id="st" style="color: red;"></span>
+    <br />
+    Mother's Name
+    <input type="text" id="m">
+    <span id="sm" style="color: red;"></span>
+    <br />
+    Address
+    <textarea id="a"></textarea>
+    <span id="sa" style="color: red;"></span>
+    <br />
+    Email
+    <input type="email" id="e">
+    <span id="se" style="color: red;"></span>
+    <br />
+    Password
+    <input type="password" id="p">
+    <span id="spp" style="color: red;"></span>
+    <br />
+    Mobile number
+    <input type="text" id="mb">
+    <span id="sb" style="color: red;"></span>
+    <br />
+    Pincode
+    <input type="text" id="pi" ">
+    <span id="si" style="color: red;"></span>
+    <br />
+    Adhar number
+    <input type="text" id="a" ">
+    <span id="sa" style="color: red;"></span>
+    <br />
+    <input type="button" value="check" onclick="ch()">
+    <br />
+
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <script>
+function ch()
+{
+    //alert("hi hi");
+    mname=/^[0-9]{10}$/
+    var mob=document.getElementById("mb").value;
+    if(!mname.test(mob))
+    {
+        //alert("invalid");
+        document.getElementById("mb").style.border="2px solid red";
+        document.getElementById("sp").innerHTML="invalid number";
+        document.getElementById("sp").style.color="red";
+    }
+    else{
+        //alert("valid");
+        document.getElementById("mb").style.border="";
+        document.getElementById("sp").innerHTML="Valid number";
+        document.getElementById("sp").style.color="green";
+    }
+
+}
+        </script>
+    </head>
+    <body>
+        Mobile number
+        <input type="text" id="mb">
+        <span id="sp"></span>
+        <br/>
+        <input type="button" value="check" onclick="ch()">
+    </body>
+</html>

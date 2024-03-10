@@ -1,0 +1,31 @@
+<html>
+
+<head>
+    <script>
+        function ch() {
+            //alert("hi hi");
+            pname = /^[a-zA-Z ]{3,8}$/
+            var name = document.getElementById("tb").value;
+            if (!pname.test(name)) {
+                //alert("invalid name");
+                document.getElementById("tb").style.border="2px solid red";
+                document.getElementById("sp").innerHTML="invalid name";
+                document.getElementById("sp").style.color="red";
+            }
+            else {
+                //alert("valid name");
+                document.getElementById("sp").style.border = "";
+            }
+        }
+    </script>
+</head>
+
+<body>
+    Name
+    <input type="text" id="tb">
+    <span id="sp"></span>
+    <br />
+    <input type="button" value="check" onclick="ch()">
+</body>
+
+</html>

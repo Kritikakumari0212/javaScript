@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <script>
+function ch()
+{
+    var mob=document.getElementById("tb").value;
+    //alert(mob);
+    if(mob.length==10)
+    {
+        document.getElementById("tb").style.border="";
+        document.getElementById("s").innerHTML="";
+    }
+    else{
+        //alert("galat");
+        document.getElementById("tb").style.border="2px solid red";
+        document.getElementById("s").innerHTML="Invalid number";
+    }
+}
+        </script>
+    </head>
+    <body>
+        Mobile number
+        <input type="text" id="tb">
+        <span style="color: red;" id="s"></span>
+        <br/>
+        <input type="button" value="check" onclick="ch()";
+    </body>
+</html>

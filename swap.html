@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <script>
+function sw()
+{
+var t1=document.getElementById("h1").innerHTML;
+//alert(t1);
+var t2=document.getElementById("h2").innerHTML;
+//alert(t2);
+var status=window.confirm("r u sure you want to swap");
+if(status==true)
+{
+    document.getElementById("h2").innerHTML=t1;
+    document.getElementById("h1").innerHTML=t2;
+}
+else{
+
+}
+
+}
+        </script>
+    </head>
+    <body>
+        <h1 id="h1">Softpro india</h1>
+        <h2 id="h2">Integral university</h2>
+        <input type="button" value="SWAP" onclick="sw()">
+    </body>
+</html>

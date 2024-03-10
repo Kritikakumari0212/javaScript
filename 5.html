@@ -1,0 +1,34 @@
+<!-- innerHTML is used in container tags
+value is used in self closing tags -->
+
+
+<html>
+
+<head>
+    <script>
+        function rev() {
+            var a = document.getElementById("v").value;
+            //alert(a);
+            var status = window.confirm("r u sure you want to rev");
+            while (a>0) {
+                var b;
+                b = b * 10 + a % 10;
+                a = a / 10;
+            }
+            document.getElementById("h").value = a;
+        }
+    </script>
+</head>
+
+<body>
+    Enter a value=
+    <input type="text" id="v">
+    <br />
+    <input type="button" value="REVERSE" onclick="rev()">
+    <br />
+    <h1>Result</h1>
+    <input type="text" id="h">
+
+</body>
+
+</html>

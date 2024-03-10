@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <script>
+function ch()
+{
+    var pass=document.getElementById("tb").value;
+    //alert("hi")
+    if(pass.length<=3)
+    {
+        document.getElementById("sp").innerHTML="typing...";
+        document.getElementById("sp").style.color="red";
+        document.getElementById("sp").style.fontFamily="monotype corsiva";
+    }
+    else if(pass.length>3 && pass.length<=6)
+    {
+        
+        document.getElementById("sp").innerHTML="<b>medium pass</b>";
+        document.getElementById("sp").style.color="orange";
+        document.getElementById("sp").style.fontFamily="";
+    }
+    else{
+        
+        document.getElementById("sp").innerHTML="strong pass";
+        document.getElementById("sp").style.color="green";
+        document.getElementById("sp").style.fontFamily="";
+    }
+}
+        </script>
+    </head>
+    <body>
+        Password
+        <input type="password" id="tb" onkeypress="ch()">
+        <span id="sp"></span>
+    </br>
+    <!-- <input type="button" value="pass" onclick="ch()"; -->
+
+    </body>
+</html>

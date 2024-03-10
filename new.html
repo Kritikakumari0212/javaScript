@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function ch() {
+            //alert("hihi");
+            var ps = document.getElementById("pass").value;
+            ppass = /^[a-z0-9]{1,2}$/
+            pppass = /^[a-z0-9]{3,5}$/
+            ppppass = /^[a-z0-9@$%&!]{6,10}$/
+            if (ppass.test(ps)) {
+                //alert("weak");
+                document.getElementById("pass").style.border = "2px solid red";
+                document.getElementById("sp").innerHTML = "weak password";
+                document.getElementById("sp").style.color = "red";
+            }
+            else if (pppass.test(ps)) {
+                //alert("medium pass");
+                document.getElementById("pass").style.border = "2px solid red";
+                document.getElementById("sp").innerHTML = "medium password";
+                document.getElementById("sp").style.color = "orange";
+            }
+            else if (!ppppass.test(ps)) {
+                document.getElementById("pass").style.border = "2px solid red";
+                document.getElementById("sp").innerHTML = "must contain one special character";
+                document.getElementById("sp").style.color = "red";
+            }
+            else (ppppass.test(ps))
+            {
+                document.getElementById("pass").style.border = "";
+                document.getElementById("sp").innerHTML = "";
+                document.getElementById("sp").style.color = "";
+            }
+        }
+    </script>
+</head>
+
+<body>
+    Password
+    <input type="password" id="pass">
+    <span id="sp"></span>
+    </br>
+    <input type="button" value="check" onclick="ch()">
+</body>
+
+</html>

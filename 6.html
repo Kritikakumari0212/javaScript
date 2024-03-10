@@ -1,0 +1,52 @@
+<html>
+    <head>
+        <script>
+function add()
+{
+    var a=document.getElementById("f").value;
+    var b=document.getElementById("s").value;
+sum=a+b;
+document.getElementById("1").value=+sum;
+}
+function sub()
+{
+    var a=document.getElementById("f").value;
+    var b=document.getElementById("s").value;
+sub=a-b;
+document.getElementById("1").value=+sub;
+}
+function mul()
+{
+    var a=document.getElementById("f").value;
+    var b=document.getElementById("s").value;
+mul=a*b;
+document.getElementById("1").value=+mul;
+}
+function div()
+{
+    var a=document.getElementById("f").value;
+    var b=document.getElementById("s").value;
+div=a/b;
+document.getElementById("1").value=+div;
+}
+        </script>
+    </head>
+    <body>
+        Enter first number=
+        <input type="text" id="f">
+    </br>
+    Enter second number=
+        <input type="text" id="s">
+    </br>
+    <input type="button"value="ADD" onclick="add()">
+    <input type="button"value="SUB" onclick="sub()">
+    <input type="button"value="MUL" onclick="mul()">
+    <input type="button"value="DIV" onclick="div()">
+</br>
+    <h1>Result</h1>
+    <br/>
+    <input type="text" id="1">
+</br>
+    
+    </body>
+</html>
